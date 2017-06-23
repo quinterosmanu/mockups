@@ -3,21 +3,58 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>List</ion-title>
+    <ion-title>Marcas</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon [name]="item.icon" item-left></ion-icon>
-      {{item.title}}
-      <div class="item-note" item-right>
-        {{item.note}}
-      </div>
-    </button>
-  </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div>
+  <ion-searchbar></ion-searchbar>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6>
+        <ion-list>
+          <ion-item>
+            <ion-thumbnail>
+              <img src="assets/img/johnny_walker.png">
+            </ion-thumbnail>
+            Johnny Walker
+          </ion-item>
+          <ion-item>
+            <ion-thumbnail>
+              <img src="assets/img/chivas_regal.jpg">
+            </ion-thumbnail>
+            Chivas Regal
+          </ion-item>
+          <ion-item>
+            <ion-thumbnail>
+              <img src="assets/img/jameson.jpg">
+            </ion-thumbnail>
+            Jameson
+          </ion-item>
+        </ion-list>
+      </ion-col>
+      <ion-col col-6>
+        <ion-list>
+          <ion-item>
+            <ion-thumbnail>
+              <img src="assets/img/tullamore_dew.jpg">
+            </ion-thumbnail>
+            Tullamore Dew
+          </ion-item>
+          <ion-item>
+            <ion-thumbnail>
+              <img src="assets/img/ballantines.png">
+            </ion-thumbnail>
+            Ballantines
+          </ion-item>
+          <ion-item>
+            <ion-thumbnail>
+              <img src="assets/img/compass_box.png">
+            </ion-thumbnail>
+            Compass-Box
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

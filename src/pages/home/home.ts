@@ -11,7 +11,7 @@ export class HomePage {
   private categories: Observable<Array<any>>;
 
   constructor(public navCtrl: NavController, public categoriesProv: CategoriesProvider) {
-    this.categories = categoriesProv.listCategories();
+    ///this.categories = categoriesProv.listCategories();
     console.log(this.categories);
   }
 
